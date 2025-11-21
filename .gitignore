@@ -1,0 +1,58 @@
+# ================ #
+# Unity .gitignore #
+# ================ #
+
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+Recordings/
+
+# Visual Studio / Rider
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+
+# Unity auto-generated files
+ExportedObj/
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+# Crash reports
+sysinfo.txt
+
+# TextMesh Pro
+[Tt]MP/
+*.asset
+
+# Unity Cache
+*.unitypackage
+*.apk
+*.aab
+*.exe
+
+# Addressables
+[Aa]ssets/**/addressables_content_state.bin
+
+# Builds artifacts
+[Bb]uild*/  
+[Bb]in/
+[Dd]ebug*/
+[Rr]elease*/
+
+# OS
+.DS_Store
+Thumbs.db
