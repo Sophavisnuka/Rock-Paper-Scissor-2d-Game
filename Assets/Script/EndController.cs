@@ -19,6 +19,10 @@ public class EndController : MonoBehaviour
     }
     public void RestartGame()
     {
+        SceneManager.LoadScene("SampleScene");
+    }
+    public void BackToMenu()
+    {
         SceneManager.LoadScene("StartScene");
     }
 }
