@@ -50,12 +50,14 @@ public class GameController : MonoBehaviour
         {
             computerScore++;
             computerScoreText.text = computerScore.ToString();
-        }
-        if (computer == 1 && player == 2 || computer == 2 && player == 3 || computer == 3 && player == 1)
+        } else if (computer == 1 && player == 2 || computer == 2 && player == 3 || computer == 3 && player == 1)
         {
             playerScore++;
             playerScoreText.text = playerScore.ToString();
         }
+
+        StartCoroutine(ResetImagesAfterDelay());
+
         if (playerScore >= 5)
         {
             playerWon = true;
@@ -67,4 +69,12 @@ public class GameController : MonoBehaviour
             SceneManager.LoadScene("EndScene");
         }
     }
+    IEnumerator ResetImagesAfterDelay()
+    {
+        yield return new WaitForSeconds(1.5f);   // small delay so user can see the result
+        
+        playerImage.sprite = questionSprite;
+        computerImage.sprite = questionSprite;
+    }
+
 }
