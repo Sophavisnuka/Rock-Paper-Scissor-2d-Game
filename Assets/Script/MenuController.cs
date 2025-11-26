@@ -7,8 +7,17 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    public void StartGame(GameObject buttonObject)
+    public void StartGame()
     {
         SceneManager.LoadScene("SampleScene");
+    }
+    public void GoToRules()
+    {
+        SceneManager.LoadScene("GameRule");
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("StartScene");
     }
 }

@@ -6,15 +6,25 @@ using TMPro;
 
 public class EndController : MonoBehaviour
 {
+    public GameObject winImage;
+    public GameObject loseImage;
     public TMP_Text resultText;
     void Start()
     {
         if (GameController.playerWon)
         {
             resultText.text = "You Win! Congratulation"; 
-        } else
-        {
+            winImage.SetActive(true);
+
+            if (loseImage != null) {
+                loseImage.SetActive(false);
+            }
+        } else  {
             resultText.text = "You Lose! Try again";
+            loseImage.SetActive(true);
+            if (winImage != null) {
+                winImage.SetActive(false);
+            }
         }
     }
     public void RestartGame()
